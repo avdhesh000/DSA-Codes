@@ -1,0 +1,5 @@
+cd /d Y:\My Files\# DSA in C++\DSA Codes
+
+g++ file_name.cpp -o file_name
+
+-o file_name ::  it is used to name the executable file name 
