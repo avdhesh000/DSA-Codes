@@ -1349,3 +1349,861 @@
 //     }
 //     return 0;
 // }
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Nested Loop
+// Done by me itself 
+
+// // Patterns
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+
+//     cout<<"\nPattern 1 :"<<endl;
+//     for(int i = 1; i<=4;i++ )
+//     {
+//         for(int j = 1;j<=4;j++) {
+//             cout<<i<<" ";
+//         }
+//         cout<<endl;
+//     }
+
+
+//     cout<<"\nPattern 2 : Star Pattern"<<endl;
+//     for(int i = 1; i<=4;i++)
+//     {
+//         for(int j = 1; j<=i;j++) {
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+
+
+//     cout<<"\nPattern 3 : Inverted Star Pattern"<<endl;
+//     for(int i = 4; i>=1; i--)
+//     {
+//         for(int j = 1; j<=i; j++ ) {
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+
+
+//     cout<<"\nPattern 4 : Half Pyramid"<<endl;
+//     for(int i = 1; i<=4;i++)
+//     {
+//         for(int j = 1; j<=i;j++) {
+//             cout<<j;
+//         }
+//         cout<<endl;
+//     }
+
+
+//     cout<<"\nPattern 5 :"<<endl;
+//     char ch = 'A';
+//     for(int i=1;i<=4;i++)
+//     {
+//         for(int j=1; j<=i; j++) {
+//             cout<<ch<<" ";
+//             ch++;
+//         }
+//         cout<<endl;
+//     }
+
+
+//     cout<<"\nPattern 6 : Hollow Rectangle Pattern\n"<<endl;
+//     for(int i = 1; i<=4; i++)
+//     {
+//         for(int j=1; j<=5; j++) {
+//             if((i==2 || i==3) && (j>=2 && j<=4)){
+//                 cout<<"   ";
+//             }
+//             else{
+//             cout<<" * ";
+//             }
+//         }
+//         cout<<endl;
+//     }   
+
+
+//     cout<<"\nPattern 7 : Inverted & Rotated Half Pyramid Pattern\n"<<endl;
+//     for(int i=4; i>=1; i--)
+//     {
+//         for(int j=1; j<=4; j++) {
+//             if(j<i){
+//                 cout<<" ";
+//             }
+//             else{
+//                 cout<<"*";
+//             }
+//         }
+//         cout<<endl;
+//     }
+    
+
+//     cout<<"\nPattern 8 : Floyd's Triangle\n"<<endl;
+//     int k =1;
+//     for(int i=1; i<=5; i++)
+//     {
+//         for(int j=1; j<=i; j++)
+//         {
+//             cout<<k<<' ';
+//             k++;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// // Pattern means, a program can be Generalized and all...
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter n : ";
+//     cin>>n;
+
+    // cout<<"\nPattern 1 :"<<endl;
+    // for(int i=1; i<=n; i++ )
+    // {
+    //     for(int j = 1;j<=n;j++) {
+    //         cout<<i<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+
+    // cout<<"\nPattern 2 : Star Pattern"<<endl;
+    // for(int i = 1; i<=n; i++)
+    // {
+    //     for(int j = 1; j<=i; j++) {
+    //         cout<<"* ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    
+
+    // cout<<"\nPattern 3 : Inverted Star Pattern"<<endl;
+    // for(int i = 1; i<=n; i++)
+    // {
+    //     for(int j = 1; j<=(n-i+1); j++ ) {
+    //         cout<<"* ";
+    //     }
+    //     cout<<endl;
+    // }
+
+
+    // cout<<"\nPattern 4 : Half Pyramid"<<endl;
+    // for(int i = 1; i<=n;i++)
+    // {
+    //     for(int j = 1; j<=i;j++) {
+    //         cout<<j;
+    //     }
+    //     cout<<endl;
+    // }
+
+
+    // cout<<"\nPattern 5 : Character Pyramid Pattern"<<endl;
+    // char ch = 'A';   // continous Pattern getting updated
+    // for(int i=1;i<=n;i++)
+    // {
+    //     for(int j=1; j<=i; j++) {
+    //         cout<<ch<<" ";
+    //         ch++;
+    //     }
+    //     cout<<endl; 
+    // }
+
+
+    // cout<<"\nPattern 6 : Hollow Rectangle Pattern\n"<<endl;
+    // for(int i = 1; i<=n; i++)
+    // {
+    //     cout<<" * ";   // First star
+    //     for(int j=1; j<=n-1; j++) {
+    //         if(i==1 || i==n){     // For 1st and last Row, it prints '*'
+    //             cout<<" * "; 
+    //         }
+    //         else{            // for rows b/w 1st and last it will print space by the Pattern
+    //         cout<<"   ";
+    //         }
+    //     }
+    //     cout<<" * "<<endl;   // Last star
+    // }   
+    // cout<<endl;
+
+
+    // cout<<"\nPattern 7 : Inverted & Rotated Half Pyramid Pattern\n"<<endl;
+    // for(int i=1; i<=n; i++) {
+    //     // spaces
+    //     for(int j=1; j<=n-i; j++) {
+    //         cout<<" ";
+    //     }
+
+    //     // stars
+    //     for(int j=1; j<=i; j++){
+    //         cout<<"*";
+    //     }
+    //     cout<<endl;
+    // }
+
+    
+
+    // cout<<"\nPattern 8 : Floyd's Triangle\n"<<endl;
+    // int num=1;
+    // for(int i=1; i<=n; i++)
+    // {
+    //     for(int j=1; j<=i; j++)
+    //     {
+    //         cout<<num++<<' ';
+    //     }
+    //     cout<<endl;
+    // }
+
+    
+    // cout<<"\nPattern 9 : Diamond Pattern\n"<<endl;
+    // // 1st Pyramid
+    // for(int i=1;i<=n;i++) {
+    //     //spaces
+    //     for(int j=1; j<=n-i; j++) {
+    //         cout<<" ";
+    //     }
+
+    //     //Stars
+    //     for(int j=1;j<=(2*i-1); j++) {
+    //         cout<<"*";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // // 2nd Pyramid
+    // for(int i=n; i>=1; i--) {
+    //     //spaces
+    //     for(int j=1; j<=n-i; j++) {
+    //         cout<<" ";
+    //     }
+
+    //     //Stars
+    //     for(int j=1; j<=(2*i-1); j++) {
+    //         cout<<"*";
+    //     }
+    //     cout<<endl;
+    // }
+
+
+
+    // cout<<"\nPattern 10 : Butterfly Pattern\n"<<endl;
+    // // Upper half 
+    // for(int i=1;i<=n;i++) {
+    //     //stars
+    //     for(int j=1; j<=i; j++) {
+    //         cout<<"*";
+    //     }
+    //     // spaces
+    //     for(int k=1; k<=2*(n-i); k++) {
+    //         cout<<" ";
+    //     }
+    //     //stars
+    //     for(int l=1; l<=i; l++) {
+    //         cout<<"*";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // // Lower half
+    // for(int i=n; i>=1; i--) {
+    //     for(int j=1; j<=i; j++) {
+    //         cout<<"*";
+    //     }
+    //     for(int j=1; j<=2*(n-i); j++) {
+    //         cout<<" ";
+    //     }
+    //     for(int j=1; j<=i; j++) {
+    //         cout<<"*";
+    //     }
+    //     cout<<endl;
+    // }
+    
+
+//     return 0;
+// }
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Day 6 Assignemnt
+
+// // Q1.
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n=5;
+//     bool num = true;
+//     for(int i=1; i<=n; i++) {
+//         for(int j=1; j<=i; j++) {
+//             cout<<num<<" ";
+//             num=!num;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+// //Q2. 
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n=5;
+//     // Method 1
+//     for(int i=1; i<=n; i++) {
+//         for(int j=1; j<=n-i; j++) {
+//             cout<<" ";
+//         }
+//         for(int j=1; j<=n; j++) {
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+
+//     // Method 2
+//     for(int i=n; i>=1; i--)
+//     {
+//         for(int j=1; j<=i-1; j++)
+//         {
+//             cout<<" ";
+//         }
+//         for(int j=1; j<=n; j++)
+//         {
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+    
+//     return 0;
+// }
+
+
+
+// // Q3. 
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n=5;
+//     for(int i=1; i<=n; i++) {
+//         //spaces
+//         for(int j=1; j<=n-i; j++) {
+//             cout<<"  ";
+//         }
+//         // num backward
+//         for(int j=i; j>=1; j--) {
+//             cout<<j<<" ";
+//         }
+//         //num forward
+//         for(int j=2; j<=i; j++) {
+//             cout<<j<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+//separate separateseparate separateseparate separateseparate separateseparate separateseparate separateseparate separateseparate separate
+
+
+/*
+
+Day 7 starts
+
+*/
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// void sayHello();     // forward function declaration 
+// void assistant();
+// int main()
+// {
+//     cout << "\nUsing Predined function multiple times in main function" << endl;
+//     sayHello();     // function call
+//     sayHello();
+//     assistant();
+//     return 0;
+// }
+
+// // function defination
+// void sayHello()
+// {
+//     cout<<"Hello :) "<<endl;
+// }
+
+// void assistant()
+// {
+//     cout<<"assistant function controlling sayHello function"<<endl;
+//     sayHello();
+//     cout<<"\r\rWork Done"<<endl;
+// }
+
+////////////////////////////////////////////////////////////////////
+
+// // Default Argument Concept
+// #include<iostream>
+// using namespace std;
+
+// int sum(int a, int b=1)  // a and b are parameters
+// {
+//     int z = a + b;
+//     return z;
+// }
+
+// int diff(int a=7, int b=2)  // x and y are parameters
+// {
+//     return a-b;
+// }
+// int main()
+// {
+//     cout<<"Sum is "<<sum(2,4)<<endl;  // 2,4 are arguments
+//     cout<<"Difference is "<<diff()<<endl;
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// // Function to find product of 2 numbers a & b.
+// #include<iostream>
+// using namespace std;
+
+// void prod(int a, int b)
+// {
+//     int p =a*b;
+//     cout<<"Product of "<<a<<" and "<<b<<" is "<<p<<endl;
+// }
+
+// // Function to check for ODD or EVEN
+// void evenodd()
+// {
+//     int num;
+//     cout<<"Enter number to check for even or odd : ";
+//     cin>>num;
+//     if(num%2==0){
+//         cout<<num<< " is Even"<<endl;
+//     }
+//     else{
+//         cout<<num<<" is Odd"<<endl;
+//     }
+// }
+
+// // Function to print Factorial of  a number, n
+// int fact(int num)
+// {
+//     int fact=1;
+//     for(int i=1; i<=num; i++)
+//     {
+//     fact = fact*i; 
+//     }
+//     return fact;
+// }
+
+// int main()
+// {
+//     // product scene 
+//     int a; int b;
+//     cout<<"Enter a : ";
+//     cin>>a;
+//     cout<<"Enter b : ";
+//     cin>>b;
+//     prod(a,b);
+
+//     // Even Odd Scene
+//     evenodd();
+
+//     // factorial of number n
+//     int num;
+//     cout<<"Enter number for its factorial value : ";
+//     cin>>num;
+//     int f = fact(num);
+//     cout<<"Factorial of "<<num<<" is "<<f<<endl;
+//     cout<<"Factorial of 0 is "<<fact(0)<<endl;
+//     cout<<"Factorial of 1 is "<<fact(1)<<endl;
+//     cout<<"Factorial of 2 is "<<fact(2)<<endl;
+//     cout<<"Factorial of 3 is "<<fact(3)<<endl;
+//     cout<<"Factorial of 4 is "<<fact(4)<<endl;
+//     cout<<"Factorial of 5 is "<<fact(5)<<endl;
+//     cout<<"Factorial of 6 is "<<fact(6)<<endl;
+
+//     return 0; 
+// }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// void sum(int a, int b);
+// int prime(int num);
+// void prime2(int num);
+// int main()
+// {
+//     int x = 45;
+//     int y= 10;
+//     // sum function call
+//     sum(x,y);
+
+//     // prime Function call
+//     prime(0);
+//     prime2(1);
+//     prime2(2);
+//     prime(3);
+//     prime2(4);
+//     prime2(5);
+//     prime(6);
+//     prime2(7);
+
+//     return 0;
+// }
+// void sum(int a, int b)
+// {
+//     cout<<a<<" + "<<b<<" = "<<a+b<<endl;
+// }
+
+// // Function to print if Number is prime or not
+// int prime(int num)
+// {
+//     if(num<=1) {
+//         cout<<num<<" is not Prime"<<endl;
+//     }
+//     else {
+//     bool isprime = true;
+//     for(int i=2; i<=num-1; i++) {
+//         if(num%i==0) {
+//             isprime = false;  // non-Prime
+//             break;
+//         }
+//     }
+//     if(isprime==1){
+//     cout<<num<<" is "<<"Prime."<<endl;
+//     }
+//     else{
+//         cout<<num<<" is not Prime"<<endl;
+//     }
+//     return isprime;
+// }
+// }
+
+// void prime2(int num)
+// {
+//     bool isprime = 1;
+//     if(num<=1){
+//         cout<<num<<" is not Prime"<<endl;
+//     }
+//     else {
+//         for(int i=2; i*i<=num; i++) {   // More Efficient Program to check for Prime or not
+//             if(num%i==0){
+//                 isprime=0;
+//                 break;
+//             }
+//         }
+//         if(isprime==1) {
+//             cout<<num<<" is Prime"<<endl;
+//         }
+//         else{
+//             cout<<num<<" is not Prime"<<endl;
+//         }
+//     }
+// }
+
+
+
+// // Global scope of Variable
+// #include<iostream>
+// using namespace std;
+// int x=10;
+// int y;  //initial itself to 0
+// int main()
+// {
+//     cout<<x<<endl;
+//     cout<<y<<endl;
+//     y=20;
+//     {
+//         int z=30;
+//         cout<<z<<endl; 
+//         cout<<y<<endl;
+//     }
+//     cout<<y<<endl;
+//     return 0;
+// }
+
+
+///////////////////##############################################################
+
+
+// // Binomial Coefficient Function Programs
+// #include<iostream>
+// using namespace std;
+// int n, r;
+// int fact(int num)
+// {
+//     int fact=1;
+//     for(int i=1; i<=num; i++)
+//     {
+//     fact = fact*i; 
+//     }
+//     return fact;
+// }
+
+// void input()
+// {
+//     cout<<"Enter value of n : ";
+//     cin>>n;
+//     cout<<"Enter value of r : ";
+//     cin>>r;
+// }
+
+// void binomial(int n, int r)
+// {
+//     int val1 = fact(n);
+//     int val2 = fact(r);
+//     int val3 = fact(n-r);
+//     int result = val1 / (val2 * val3);
+//     cout<<"The Binomial Cofficient for "<<n<<"C"<<r<<" is "<<result<<endl;
+
+// }
+
+// int main()
+// {
+//     input();
+//     binomial(n,r);
+//     binomial(5,2);
+//     return 0;
+// }
+
+
+//########################################################################
+
+
+// // Function Overloading 
+// #include<iostream>
+// using namespace std;
+
+// int sum(int a, int b) {
+//     cout<<(a+b)<<endl;
+//     return a+b;
+// }
+
+// // Function Overloading Doesn't depends on Return Type but on Parameters only
+// // double sum(int a, int b) {
+// //     cout<<(a+b)<<endl;
+// //     return a+b;
+// // }
+
+// double sum(double a, double b) {
+//     cout<<(a+b)<<endl;
+//     return a+b;
+// }
+
+// int main() {
+//     sum(2,3);
+//     sum(12,13);
+//     sum(2.5,7.5); // If double sum() isn't defined then, Compiler Try Implicit Conversion with int sum(), giving wrong output 
+//     return 0;
+// }
+
+
+///##############################################################################
+
+
+// // Print all Primes in the Range of 2 to n.
+
+// Method 1
+// #include<iostream>
+// using namespace std;
+
+// int prime(int num)
+// {
+//     cout<<"\nPrime numbers b/w 2 and "<<num<<" are as follows: ";
+//     bool isprime = true;
+//     if (num<=1){
+//         cout<<"Not Found"<<endl;
+//     }
+//     else {
+//         for(int i=2; i<=num; i++) {
+//             for(int j=2; j*j<=i; j++) {
+//                 isprime = (i % j == 0) ? false : true;
+//                 if (!isprime) {
+//                     break;
+//                 }
+//             }
+//             if(isprime==1) {
+//                 cout<<i<<" ";
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
+// int main()
+// {
+//     prime(1);
+//     prime(2);
+//     prime(17);
+//     prime(4);
+//     prime(15);
+//     prime(6);
+// }
+
+
+
+// // Method 2
+// // Most Important
+// #include<iostream>
+// using namespace std;
+
+// bool isprime(int num) {
+//     if(num<=1) {
+//         return false;
+//     }
+
+//     for(int i=2; i*i<=num; i++) {
+//         if(num%i==0) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
+// void allprime(int num) {
+//     cout<<"the Prime numbers b/w 2 and "<<num<<" are : ";
+//     for(int i=2; i<=num; i++) {
+//         if(isprime(i)) {  // means if isprime==true then print i
+//             cout<<i<<" ";
+//         }
+//     }
+//     cout<<endl; 
+// }
+
+// int main() {
+//     allprime(0);
+//     allprime(1);
+//     allprime(2);
+//     allprime(3);
+//     allprime(12);
+//     allprime(19);
+//     return 0;
+// }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// // Day 7 Assignment Questions
+
+
+// #include<iostream>
+// using namespace std;
+
+// //Q1. 
+// bool check_pal(int num) {
+//     int rem, rev=0, n;
+//     n=num;
+//     while(n>=1) {
+//         rem = n % 10;
+//         rev = rev * 10 + rem;
+//         n=n/10;
+//     } 
+//     if(rev==num){
+//        return true; 
+//     }
+//     else{
+//         return false;
+//     }
+//     return true;
+// }
+
+// //Q2. 
+// int sumofdigits(int num)
+// {
+//     int rem, sum=0;
+//     while(num>=1) {
+//         rem = num % 10;
+//         sum = sum + rem;
+//         num=num/10;
+//     } 
+//     return sum;
+// }
+
+
+// // Q3. 
+// int inputsum() {
+//     int a, b;
+//     cout<<"enter a : ";
+//     cin>>a;
+//     cout<<"enter b : ";
+//     cin>>b;
+//     return (a*a + b*b + 2*a*b);
+// }
+
+// //Q4.   
+// int larg(int x, int y, int z) {
+//     return (x>=y && x>=z)?x:(y>=z)?y:z;
+// }
+
+// //Q5.
+// char getNextChar() {
+//     char ch;
+//     cout<<"enter a charcter : ";
+//     cin>>ch;
+
+//     if(ch=='z'){
+//         return 'a';
+//     }
+//     else if(ch=='Z'){
+//         return 'A';
+//     }
+//     return (++ch);
+// }
+
+
+// int main()
+// {
+//     cout<<check_pal(121)<<endl;
+//     cout<<check_pal(321)<<endl;
+//     cout<<check_pal(2002)<<endl;
+
+
+//     cout<<sumofdigits(199)<<endl;
+//     cout<<sumofdigits(7296)<<endl;
+
+
+//     cout<<inputsum()<<endl;
+
+
+//     cout<<larg(2,4,9)<<endl;
+//     cout<<larg(12,0,65)<<endl;
+
+
+//     cout<<getNextChar()<<endl;
+
+//     return 0;
+// }
+
+
+
